@@ -69,7 +69,7 @@
                     
                     //lager HTML-objekter og henter informasjon ut av JSON-listen
                     var $bilde = $("<img src=" + liste[i].bildeAvBy + ">");
-                    var $div = $('<div class = "bilde" >');
+                    var $div = $('<div class = "des col-md-4" >');
                     var $land = $("<h1>");
                     var $by = $("<h3>");
                     
