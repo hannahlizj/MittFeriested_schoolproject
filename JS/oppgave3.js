@@ -11,7 +11,7 @@
                 { "land": "England", "by": "Liverpool", "bildeAvBy": "../Bilder/liverpool.jpg"}
             ]
         };
-
+        
             //returnerer alle feriestedene
             function hentListe(){
                 return feriestederListeJSON.feriesteder;
@@ -21,9 +21,10 @@
             return {
                 hentListe: hentListe
             }; 
-        
+  
         }()); //--end module pattern / vacaydesti 
          
+
         //APP pattern
         var GENERERE_APP = {
             
@@ -55,8 +56,10 @@
                     $("#soekBtn").click(function(){
                         GA.visLand(GA.listeOverDes);
                     });
-    
+
                 }();//--end setEvents
+                
+                $("#inputfelt").easyAutocomplete(FERIEMODUL.feriestederListeJSON);
             },//--end init
             
             visAlleDestinasjoner: function(liste){
@@ -68,8 +71,9 @@
                 for(i = 0; i < liste.length; i++){
                     
                     //lager HTML-objekter og henter informasjon ut av JSON-listen
-                    var $bilde = $("<img src=" + liste[i].bildeAvBy + ">");
-                    var $div = $('<div class = "des col-md-4" >');
+                    var $bilde = $("<img class='img-responsive' src=" + liste[i].bildeAvBy + ">");
+                    var $div2 = $("<div class='col-md-4' >");
+                    var $div = $("<div class='col-md-12 des-post' >");
                     var $land = $("<h1>");
                     var $by = $("<h3>");
                     
@@ -82,8 +86,10 @@
                     $div.append($by);
                     $div.append($bilde);
                     
+                    $div2.append($div);
+                    
                     //legger divene inn i seksjonen
-                    $("#destinasjonerSection").append($div);
+                    $("#destinasjonerSection").append($div2);
                 }
             },//--end visDestinasjoner
             
@@ -100,21 +106,25 @@
                         if(valgtLand === liste[i].land.toLowerCase()){
                             
                             //lager variabler for HTML-objekter
-                            var $bilde = $("<img src=" + liste[i].bildeAvBy + ">");
-                            var $div = $("<div>");
+                            var $bilde = $("<img class='img-responsive img-search' src=" + liste[i].bildeAvBy + ">");
+                            var $div2 = $("<div class='col-md-6' >");
+                            var $div = $("<div class='col-md-12 des-post' >");
                             var $land = $("<h1>");
                             var $by = $("<h3>");
 
-                            //henter JSON-objekter og legger de til variablene
+                            //henter ut fra JSON-listen
                             $land.html(liste[i].land);
                             $by.html(liste[i].by);
 
+                            //legger variablene (med JSON-objekter) inn i div-en
                             $div.append($land);
                             $div.append($by);
                             $div.append($bilde);
 
-                            //legger HTML-elementene inn i seksjonen
-                            $("#destinasjonerSection").append($div);
+                            $div2.append($div);
+
+                            //legger divene inn i seksjonen
+                            $("#destinasjonerSection").append($div2);
                     }//--end if-statment
                 }//--end for loop
             }//--end visDestinasjoner

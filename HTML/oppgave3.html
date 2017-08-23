@@ -4,40 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/oppgave3.css">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/easy-autocomplete.min.css"> 
+    <link rel="stylesheet" type="text/css" href="../CSS/easy-autocomplete.themes.min.css"> 
+    
     <title>Mitt feriested</title>
 </head>
 
 <body>
-    <container id="container">
+    <div class="container">
         <header>
-           <h1 id="sideTittel">Mitt feriested</h1>
+           <h1 id="sideTittel" class="page-header">Mitt feriested</h1>
         </header>
 
         <section id="inputSection">
-            <form>
+            <form class="form-inline">
                 Land
-                <input id="inputfelt" type="text">
-                <input id="soekBtn" type="button" value="Søk etter land">
-                <input id="allDestinationsBtn" type="button" value="Vis alle destinasjoner">
+                <input id="inputfelt" class="form-control" type="text">
+                <input id="soekBtn" class="btn btn-success" type="button" value="Søk etter land">
+                <input id="allDestinationsBtn" class="btn btn-success" type="button" value="Vis alle destinasjoner">
             </form>
+
         </section><!--end inputSection-->
 
-        <container id="destinasjonerSection" class="container">
+        <div id="destinasjonerSection" class="row">
 
-        </container><!--end destinasjonerSection-->
-    </container>
+        </div><!--end destinasjonerSection-->
+       
+    </div>
     
     <!--scripts-->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    
+    <script src="../JS/bootstrap.min.js"></script>
     <script src="../JS/oppgave3.js"></script>
+    <script src="../JS/jquery.easy-autocomplete.min.js"></script> 
+    
 </body>
 </html>

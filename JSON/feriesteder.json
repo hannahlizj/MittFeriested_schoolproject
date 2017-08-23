@@ -1,0 +1,9 @@
+            [
+                { "land": "Tyskland", "by": "Berlin", "bildeAvBy": "../Bilder/berlin.jpg"},
+                { "land": "Tyskland", "by": "Munchen", "bildeAvBy": "../Bilder/munchen.jpg"},
+                { "land": "Spania", "by": "Madrid", "bildeAvBy": "../Bilder/madrid.jpg"},
+                { "land": "Spania", "by": "Barcelona", "bildeAvBy": "../Bilder/barcelona.jpg"},
+                { "land": "Frankrike", "by": "Paris", "bildeAvBy": "../Bilder/paris.jpg"},
+                { "land": "England", "by": "Manchester", "bildeAvBy": "../Bilder/manchester.jpg"},
+                { "land": "England", "by": "Liverpool", "bildeAvBy": "../Bilder/liverpool.jpg"}
+            ]
